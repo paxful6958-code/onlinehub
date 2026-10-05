@@ -1,360 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Checkout</title>
-	<link href="./css/bootstrap.min.css" rel="stylesheet">
-	<link href="./css/global.css" rel="stylesheet">
-	<link href="./css/checkout.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/global.css" rel="stylesheet">
+    <link href="./css/checkout.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.icon">
-	<script src="./js/jquery-2.1.1.min.js"></script>
+    <script src="./js/jquery-2.1.1.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/style.css">
-    
-  </head>
-  
+
+</head>
+
 <body>
 
-    
-<header class="header"  style="position: fixed;
+
+    <header class="header" style="position: fixed;
 display: flex;
 align-items: center;
 justify-content: space-between;
 padding:2px 5%;
 background: white;">
 
-    <a href="./index.html" class="logo" style="text-decoration: none;"> <i class="fas fa-shopping-cart"></i> FaLToo </a>
-&nbsp;
-    <nav class="navbar" style="
+        <a href="./index.html" class="logo" style="text-decoration: none;"> <i class="fas fa-shopping-cart"></i> MOBILE_HUB </a>
+        &nbsp;
+        <nav class="navbar" style="
     font-size: 1.7rem;
     margin:0.1%; 
     position:relative; top:10px">
-        <a href="#home" id="hov" style="position: relative; right:1px; top:5px;">home</a>
-        <a href="#features" id="hov" style="position: relative; right:1px; top:5px;">features</a>
-        <a href="#products" id="hov" style="position: relative; right:1px; top:5px;">products</a>
-        <a href="#categories" id="hov" style="position: relative; right:1px; top:5px;">categories</a>
-        <a href="#review" id="hov" style="position: relative; right:1px; top:5px;">review</a>
-        <a href="#blogs" id="hov" style="position: relative; right:1px; top:5px;">blogs</a>
-    </nav>
+            <a href="#home" id="hov" style="position: relative; right:1px; top:5px;">home</a>
+            <a href="#features" id="hov" style="position: relative; right:1px; top:5px;">features</a>
+            <a href="#products" id="hov" style="position: relative; right:1px; top:5px;">products</a>
+            <a href="#categories" id="hov" style="position: relative; right:1px; top:5px;">categories</a>
+            <a href="#review" id="hov" style="position: relative; right:1px; top:5px;">review</a>
+            <a href="#blogs" id="hov" style="position: relative; right:1px; top:5px;">blogs</a>
+        </nav>
 
-    <div class="icons" >
-        <div class="fas fa-search" id="search-btn"></div>
-        <div class="fas fa-shopping-cart" id="cart-btn"></div>
-        <div class="fas fa-user" id="login-btn"></div>
-    </div>
-
-    <form action="" class="search-form">
-        <input type="search" id="search-box" placeholder="search here...">
-        <label for="search-box" class="fas fa-search"></label>
-    </form>
-
-    <div class="shopping-cart">
-        <div class="box">
-            <i class="fas fa-trash"></i>
-            <img alt="Realme GT Neo 3 MORE PICTURES" 
-                 src=https://fdn2.gsmarena.com/vv/bigpic/realme-gt-neo3-new.jpg>
-            <div class="content">
-                <h3>Realme GT Neo 3</h3>
-                <span class="price"> &#8377 45,000/-</span>
-                <span class="quantity">qty : 1</span>
-            </div>
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-user" id="login-btn"></div>
         </div>
-        <div class="box">
-            <i class="fas fa-trash"></i>
-            <img alt="Samsung Galaxy S22 5G MORE PICTURES" 
-                src=https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s22-5g.jpg>
-            <div class="content">
-                <h3> Samsung S22</h3>
-                <span class="price"> &#8377 95,000/-</span>
-                <span class="quantity">qty : 1</span>
+
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+        <div class="shopping-cart">
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img alt="Realme GT Neo 3 MORE PICTURES" src=https://fdn2.gsmarena.com/vv/bigpic/realme-gt-neo3-new.jpg>
+                <div class="content">
+                    <h3>Realme GT Neo 3</h3>
+                    <span class="price"> &#8377 45,000/-</span>
+                    <span class="quantity">qty : 1</span>
+                </div>
             </div>
-        </div>
-        <div class="box">
-            <i class="fas fa-trash"></i>
-            <img alt="Apple iPhone 13
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img alt="Samsung Galaxy S22 5G MORE PICTURES" src=https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s22-5g.jpg>
+                <div class="content">
+                    <h3> Samsung S22</h3>
+                    <span class="price"> &#8377 95,000/-</span>
+                    <span class="quantity">qty : 1</span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img alt="Apple iPhone 13
                     MORE PICTURES" src=https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13.jpg>
-            <div class="content">
-                <h3>iPhone 13</h3>
-                <span class="price"> &#8377 69,000/-</span>
-                <span class="quantity">qty : 1</span>
+                <div class="content">
+                    <h3>iPhone 13</h3>
+                    <span class="price"> &#8377 69,000/-</span>
+                    <span class="quantity">qty : 1</span>
+                </div>
             </div>
+            <div class="total"> total : &#8377 209,000/- </div>
+            <a href="checkout.html" class="btn">checkout</a>
         </div>
-        <div class="total"> total :  &#8377 209,000/- </div>
-        <a href="checkout.html" class="btn">checkout</a>
-    </div>
 
-    <form action="./checkout.php" method="post" class="login-form">
-        <h3>login now</h3>
-        <input type="email" name="user" id="user" placeholder="your email" class="box">
-        <input type="password" name="pass" id="pass" placeholder="your password" class="box">
-        <p>forget your password <a href="FormValidation.html">click here</a></p>
-        <p>don't have an account <a href="FormValidation.html">create now</a></p>
-    <button type="submit" name="submit" class="btn"> Login Now </button>
-    </form>
+        <form action="./checkout.php" method="post" class="login-form">
+            <h3>login now</h3>
+            <input type="email" name="user" id="user" placeholder="your email" class="box">
+            <input type="password" name="pass" id="pass" placeholder="your password" class="box">
+            <p>forget your password <a href="FormValidation.html">click here</a></p>
+            <p>don't have an account <a href="FormValidation.html">create now</a></p>
+            <button type="submit" name="submit" class="btn"> Login Now </button>
+        </form>
 
-</header>
+    </header>
 
-<section id="checkout_page" class="clearfix checkout">
- <div class="container">
-  <div class="row">
-  <div class="checkout_1 clearfix">
-   <div class="col-sm-6">
-    <div class="check_lm clearfix">
-    <div class="check_lm1 clearfix">
-	 <ul class="mgt">
-	  <li><a href="#" id="hov" style="text-decoration: none;">Cart</a> <i class="fa fa-chevron-right"></i></li> 
-	  <li>Information <i class="fa fa-chevron-right"></i></li>
-	  <li>Shipping <i class="fa fa-chevron-right"></i></li>
-	  <li>Payment</li>
-	 </ul>
-	</div><br>
-	<div class="check_lm2 clearfix">
-	 <div class="col-sm-6 space_left">
-	  <h4>Contact information</h4>
-	 </div>
-	</div>
-	<div class="check_lm3 clearfix">
-	 <input class="form-control" placeholder="Email" type="text" name="email">
-	 <h5 class="normal"><input class="check_1" type="checkbox"> <span>Keep me up to date on news and exclusive offers</span></h5><br>
-	 <h4>Shipping address</h4>
-	</div>
-	<div class="check_lm4 clearfix">
-	 <div class="col-sm-6 space_left">
-	   <input class="form-control" placeholder="First Name" type="text" name="fname">
+    <section id="checkout_page" class="clearfix checkout">
+        <div class="container">
+            <div class="row">
+                <div class="checkout_1 clearfix">
+                    <div class="col-sm-6">
+                        <div class="check_lm clearfix">
+                            <div class="check_lm1 clearfix">
+                                <ul class="mgt">
+                                    <li><a href="#" id="hov" style="text-decoration: none;">Cart</a> <i class="fa fa-chevron-right"></i></li>
+                                    <li>Information <i class="fa fa-chevron-right"></i></li>
+                                    <li>Shipping <i class="fa fa-chevron-right"></i></li>
+                                    <li>Payment</li>
+                                </ul>
+                            </div><br>
+                            <div class="check_lm2 clearfix">
+                                <div class="col-sm-6 space_left">
+                                    <h4>Contact information</h4>
+                                </div>
+                            </div>
+                            <div class="check_lm3 clearfix">
+                                <input class="form-control" placeholder="Email" type="text" name="email">
+                                <h5 class="normal"><input class="check_1" type="checkbox"> <span>Keep me up to date on news and exclusive offers</span></h5><br>
+                                <h4>Shipping address</h4>
+                            </div>
+                            <div class="check_lm4 clearfix">
+                                <div class="col-sm-6 space_left">
+                                    <input class="form-control" placeholder="First Name" type="text" name="fname">
 
-	 </div>
-	 <div class="col-sm-6 space_right">
-	   <input class="form-control" placeholder="Last Name" type="text" name="lname">
-	 </div>
-	</div>
-	<div class="check_lm4 clearfix">
-	 <input class="form-control" placeholder="Address" type="text" name="address">
-	 <input class="form-control" placeholder="House No" type="text" name="number">
-	 <input class="form-control" placeholder="City" type="text">
-	</div>
-	<div class="check_lm4 clearfix">
-	 <div class="col-sm-4 space_left">
-	   <select class="form-control" id="subject" name="subject">
+                                </div>
+                                <div class="col-sm-6 space_right">
+                                    <input class="form-control" placeholder="Last Name" type="text" name="lname">
+                                </div>
+                            </div>
+                            <div class="check_lm4 clearfix">
+                                <input class="form-control" placeholder="Address" type="text" name="address">
+                                <input class="form-control" placeholder="House No" type="text" name="number">
+                                <input class="form-control" placeholder="City" type="text">
+                            </div>
+                            <div class="check_lm4 clearfix">
+                                <div class="col-sm-4 space_left">
+                                    <select class="form-control" id="subject" name="subject">
 		<option>Country</option>
 		<option>India</option>
 		<option>Pak</option>
 		<option>Afg</option>
 		<option>Ban</option>
 		</select>
-	 </div>
-	 <div class="col-sm-4 space_all">
-	   <select class="form-control" id="subject" name="subject">
+                                </div>
+                                <div class="col-sm-4 space_all">
+                                    <select class="form-control" id="subject" name="subject">
 		<option>State</option>
 		<option>UP</option>
 		<option>MP</option>
 		<option>Delhi</option>
 		<option>Bengal</option>
 		</select>
-	 </div>
-	 <div class="col-sm-4 space_right">
-	   <input class="form-control" placeholder="Pin Code" type="text" name="code">
-	 </div>
-	</div>
-	<div class="check_lm5 clearfix">
-	  <h5 class="normal"><input class="check_1" type="checkbox"> <span>Save this information for next time</span></h5>
-	</div>
-	<div class="checkout_1l3 clearfix">
-	 <hr>
-	 <div class="col-sm-6">
-     <h5 class="mgt" style="
+                                </div>
+                                <div class="col-sm-4 space_right">
+                                    <input class="form-control" placeholder="Pin Code" type="text" name="code">
+                                </div>
+                            </div>
+                            <div class="check_lm5 clearfix">
+                                <h5 class="normal"><input class="check_1" type="checkbox"> <span>Save this information for next time</span></h5>
+                            </div>
+                            <div class="checkout_1l3 clearfix">
+                                <hr>
+                                <div class="col-sm-6">
+                                    <h5 class="mgt" style="
         font-size: 2rem;
         text-transform: uppercase;"><a href="index.html" id="hov" style="text-decoration: none; "> Return to cart</a></h5>
-	 </div>
-     <!-- CSS for button tag is in checkout css -->
-	 <div class="col-sm-6">
-      <h5 class="mgt text-right" style="
+                                </div>
+                                <!-- CSS for button tag is in checkout css -->
+                                <div class="col-sm-6">
+                                    <h5 class="mgt text-right" style="
       font-size: 2rem;
       text-transform: uppercase;"><button id="hov" style="text-decoration: none;" onclick="fun()">Continue</button></h5>
-	 </div>
-	</div>
-	</div>
-   </div>
-   <div class="col-sm-6" >
-   <div class="check_rm clearfix">
-    <div class="checkout_1r mgt clearfix">
-	  <div class="checkout_1l2 mgt clearfix">
-	 <div class="col-sm-2">
-	  <img alt="Samsung Galaxy S22 5G MORE PICTURES" 
-      src="https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s22-5g.jpg" alt="abc" class="iw" style="width: 90px;">	 </div>
-	 <div class="col-sm-7">
-	  <p class="mgt">Samsung Galaxy S22 5G</p>
-	 </div>
-	 <div class="col-sm-3">
-	  <h6 class="text-right col_3" style="color: rgb(215, 16, 16); font-size:2rem;">&#8377 95,000/-</h6>
-	 </div>
-	</div>
-	</div>
-	<div class="checkout_1r clearfix">
-	  <div class="checkout_1l2 clearfix">
-	 <div class="col-sm-2">
-        <img alt="iphone 13" 
-        src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13.jpg" alt="abc" class="iw" style="width: 90px;">	 </div>
-	 <div class="col-sm-7">
-	  <p class="mgt">Iphone 13</p>
-	 </div>
-	 <div class="col-sm-3">
-	  <h6 class="text-right col_3" style="color: rgb(215, 16, 16); font-size:2rem;">&#8377 69,000/-</h6>
-	 </div>
-	</div>
-	</div>
-	<div class="checkout_1r clearfix">
-	  <div class="checkout_1l2 clearfix">
-	 <div class="col-sm-2">
-        <img alt="Realme GT Neo 3 MORE PICTURES" 
-        src=https://fdn2.gsmarena.com/vv/bigpic/realme-gt-neo3-new.jpg alt="abc" class="iw" style="width: 90px;">	 </div>
-	 <div class="col-sm-7">
-	  <p class="mgt">Realme GT Neo 3</p>
-	 </div>
-	 <div class="col-sm-3">
-	  <h6 class="text-right col_3" style="color: rgb(215, 16, 16); font-size:2rem;">&#8377 45,000/-</h6>
-	 </div>
-	</div>
-	</div> 
-	<div class="checkout_1r1 clearfix">
-	 <div class="checkout_1r1i clearfix">
-	  <div class="col-sm-6">
-	   <h5 class="mgt normal" style="font-size: 3rem;">Total</h5>
-	  </div>
-	  <div class="col-sm-6">
-	   <h4 class="mgt"><span class="col_3" style="color: rgb(215, 16, 16); font-size:3rem;">&#8377 209,000/-</span></h4>
-	  </div>
-	 </div>
-	</div>
-   </div>
-   </div>
-  </div>
-  
-  </div>
- </div>	 
-</section>
-<section class="footer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="check_rm clearfix">
+                            <div class="checkout_1r mgt clearfix">
+                                <div class="checkout_1l2 mgt clearfix">
+                                    <div class="col-sm-2">
+                                        <img alt="Samsung Galaxy S22 5G MORE PICTURES" src="https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s22-5g.jpg" alt="abc" class="iw" style="width: 90px;"> </div>
+                                    <div class="col-sm-7">
+                                        <p class="mgt">Samsung Galaxy S22 5G</p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <h6 class="text-right col_3" style="color: rgb(215, 16, 16); font-size:2rem;">&#8377 95,000/-</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkout_1r clearfix">
+                                <div class="checkout_1l2 clearfix">
+                                    <div class="col-sm-2">
+                                        <img alt="iphone 13" src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13.jpg" alt="abc" class="iw" style="width: 90px;"> </div>
+                                    <div class="col-sm-7">
+                                        <p class="mgt">Iphone 13</p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <h6 class="text-right col_3" style="color: rgb(215, 16, 16); font-size:2rem;">&#8377 69,000/-</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkout_1r clearfix">
+                                <div class="checkout_1l2 clearfix">
+                                    <div class="col-sm-2">
+                                        <img alt="Realme GT Neo 3 MORE PICTURES" src=https://fdn2.gsmarena.com/vv/bigpic/realme-gt-neo3-new.jpg alt="abc" class="iw" style="width: 90px;"> </div>
+                                    <div class="col-sm-7">
+                                        <p class="mgt">Realme GT Neo 3</p>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <h6 class="text-right col_3" style="color: rgb(215, 16, 16); font-size:2rem;">&#8377 45,000/-</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkout_1r1 clearfix">
+                                <div class="checkout_1r1i clearfix">
+                                    <div class="col-sm-6">
+                                        <h5 class="mgt normal" style="font-size: 3rem;">Total</h5>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <h4 class="mgt"><span class="col_3" style="color: rgb(215, 16, 16); font-size:3rem;">&#8377 209,000/-</span></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    <div class="box-container">
-
-        <div class="box">
-            <h3> Namaste <i class="fas fa-shopping-cart"></i> </h3>
-            <p>thank you for exploring our webi.</p>
-            <div class="share">
-                <a target="_blank" href="#" class="fab fa-facebook-f"> </a>
-                <a href="#" class="fab fa-twitter"></a>
-                <a href="#" class="fab fa-instagram"></a>
-                <a href="#" class="fab fa-linkedin"></a>
             </div>
         </div>
+    </section>
+    <section class="footer">
 
-        <div class="box">
-            <h3>contact info</h3>
-            <a href="#" class="links"> <i class="fas fa-phone"></i> +917415192154 </a>
-            <a href="#" class="links"> <i class="fas fa-phone"></i> +918962315400 </a>
-            <a href="#" class="links"> <i class="fas fa-envelope"></i> ranaAryan@gmail.com </a>
-            <a href="#" class="links"> <i class="fas fa-envelope"></i> Sneha@gmail.com </a>
-            <a href="#" class="links"> <i class="fas fa-envelope"></i> Deepali@gmail.com </a>
-            <a href="#" class="links"> <i class="fas fa-envelope"></i> Ankita@gmail.com </a>
-            <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i> Himachal Pradesh, india - 176001 </a>
+        <div class="box-container">
+
+            <div class="box">
+                <h3> Namaste <i class="fas fa-shopping-cart"></i> </h3>
+                <p>thank you for exploring our webi.</p>
+                <div class="share">
+                    <a target="_blank" href="#" class="fab fa-facebook-f"> </a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#" class="links"> <i class="fas fa-arrow-right"></i> home </a>
+                <a href="#" class="links"> <i class="fas fa-arrow-right"></i> features </a>
+                <a href="#" class="links"> <i class="fas fa-arrow-right"></i> products </a>
+                <a href="#" class="links"> <i class="fas fa-arrow-right"></i> categories </a>
+                <a href="#" class="links"> <i class="fas fa-arrow-right"></i> review </a>
+                <a href="#" class="links"> <i class="fas fa-arrow-right"></i> blogs </a>
+            </div>
+
+            <div class="box">
+                <h3>newsletter</h3>
+                <p>subscribe for latest updates</p>
+                <input type="email" placeholder="your email" class="email">
+                <input type="submit" value="subscribe" class="btn">
+                <img src="image/payment.png" class="payment-img" alt="">
+            </div>
+
         </div>
 
-        <div class="box">
-            <h3>quick links</h3>
-            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> home </a>
-            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> features </a>
-            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> products </a>
-            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> categories </a>
-            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> review </a>
-            <a href="#" class="links"> <i class="fas fa-arrow-right"></i> blogs </a>
-        </div>
+        <div class="credit"> <span> 2026 </span> | all rights reserved </div>
 
-        <div class="box">
-            <h3>newsletter</h3>
-            <p>subscribe for latest updates</p>
-            <input type="email" placeholder="your email" class="email">
-            <input type="submit" value="subscribe" class="btn">
-            <img src="image/payment.png" class="payment-img" alt="">
-        </div>
+    </section>
 
-    </div>
-
-    <div class="credit"> created by <span> mr. Rana Aryan </span> | all rights reserved </div>
-    
-</section>
-
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script>
-        
-          function fun() {
-                 swal({
-                  title: "Are you ready to place the order!?",
-                  icon: "info",
-                  buttons: true,
-              })
-                  .then((willDelete) => {
-                      if (willDelete) {
-                          swal("Poof! Your order has been successfully placed", {
-                              icon: "success",
-                          });
-                      } else {
-                          swal("Sorry for inconvenience","","warning");
-                      }
-                  });
-            }
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        function fun() {
+            swal({
+                    title: "Are you ready to place the order!?",
+                    icon: "info",
+                    buttons: true,
+                })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        swal("Poof! Your order has been successfully placed", {
+                            icon: "success",
+                        });
+                    } else {
+                        swal("Sorry for inconvenience", "", "warning");
+                    }
+                });
+        }
 
         let searchForm = document.querySelector('.search-form');
 
-document.querySelector('#search-btn').onclick = () =>{
+        document.querySelector('#search-btn').onclick = () => {
             searchForm.classList.toggle('active');
-        shoppingCart.classList.remove('active');
-        loginForm.classList.remove('active');
-        navbar.classList.remove('active');
-}
+            shoppingCart.classList.remove('active');
+            loginForm.classList.remove('active');
+            navbar.classList.remove('active');
+        }
 
-//         let shoppingCart = document.querySelector('.shopping-cart');
+        //         let shoppingCart = document.querySelector('.shopping-cart');
 
-// document.querySelector('#cart-btn').onclick = () =>{
-//             shoppingCart.classList.toggle('active');
-//         searchForm.classList.remove('active');
-//         loginForm.classList.remove('active');
-//         navbar.classList.remove('active');
-// }
+        // document.querySelector('#cart-btn').onclick = () =>{
+        //             shoppingCart.classList.toggle('active');
+        //         searchForm.classList.remove('active');
+        //         loginForm.classList.remove('active');
+        //         navbar.classList.remove('active');
+        // }
 
-      let loginForm = document.querySelector('.login-form');
+        let loginForm = document.querySelector('.login-form');
 
-document.querySelector('#login-btn').onclick = () =>{
+        document.querySelector('#login-btn').onclick = () => {
             loginForm.classList.toggle('active');
-        searchForm.classList.remove('active');
-        shoppingCart.classList.remove('active');
-        navbar.classList.remove('active');
-}
+            searchForm.classList.remove('active');
+            shoppingCart.classList.remove('active');
+            navbar.classList.remove('active');
+        }
 
 
         let navbar = document.querySelector('.navbar');
 
-document.querySelector('#menu-btn').onclick = () =>{
+        document.querySelector('#menu-btn').onclick = () => {
             navbar.classList.toggle('active');
-        searchForm.classList.remove('active');
-        shoppingCart.classList.remove('active');
-        loginForm.classList.remove('active');
-}
-
-
-window.onscroll = () =>{
             searchForm.classList.remove('active');
-        shoppingCart.classList.remove('active');
-        loginForm.classList.remove('active');
-        navbar.classList.remove('active');
-}
-</script>
+            shoppingCart.classList.remove('active');
+            loginForm.classList.remove('active');
+        }
 
 
-<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        window.onscroll = () => {
+            searchForm.classList.remove('active');
+            shoppingCart.classList.remove('active');
+            loginForm.classList.remove('active');
+            navbar.classList.remove('active');
+        }
+    </script>
+
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 </body>
- 
+
 </html>
