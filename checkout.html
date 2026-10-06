@@ -17,7 +17,82 @@
     <script src="./js/jquery-2.1.1.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <style>
-        /* ---------- CVV fix: match form-control look & width ---------- */
+        /* ================= COMPACT RESPONSIVE HEADER ================= */
+        
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 6px 4%;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            z-index: 1000;
+            width: 100%;
+            min-height: 0;
+        }
+        
+        .header .logo {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .header .navbar {
+            font-size: 1.3rem;
+            margin: 0;
+            top: 0;
+        }
+        
+        .header .navbar a {
+            margin: 0 6px;
+        }
+        
+        .header .icons div {
+            font-size: 1.6rem;
+            cursor: pointer;
+        }
+        
+        .header .icons span {
+            font-size: 1.2rem;
+        }
+        /* hide search box + cart panel + login form by default (compact header) */
+        
+        .header .search-form {
+            display: none;
+        }
+        
+        .header .shopping-cart {
+            display: none;
+        }
+        
+        .header .login-form {
+            display: none;
+        }
+        /* ---------- SMALL DEVICES: header shrinks, nav disappears ---------- */
+        
+        @media (max-width: 768px) {
+            .header {
+                padding: 4px 4%;
+            }
+            .header .navbar {
+                display: none;
+                /* nav links disappear on small screens */
+            }
+            .header .logo {
+                font-size: 1.3rem;
+            }
+            .header .icons div {
+                font-size: 1.4rem;
+            }
+            /* page content no longer hidden under the header */
+            #checkout_page {
+                padding-top: 70px !important;
+            }
+        }
+        /* ================= CVV FIX ================= */
         
         #cvv {
             width: 100%;
@@ -31,7 +106,7 @@
             border-radius: 4px;
             box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
         }
-        /* ---------- Pay button ---------- */
+        /* ================= PAY BUTTON ================= */
         
         #pay-btn {
             display: inline-block;
@@ -48,7 +123,7 @@
         #pay-btn:hover {
             background: rgb(180, 10, 10);
         }
-        /* ---------- OTP modal (forced center) ---------- */
+        /* ================= OTP MODAL (forced center) ================= */
         
         #otp-overlay {
             display: none !important;
@@ -145,14 +220,14 @@
 
 <body>
 
-    <!-- header section starts -->
-    <header class="header" style="position: fixed; display: flex; align-items: center; justify-content: space-between; padding:2px 5%; background: white; z-index:1000; width:100%;">
+    <!-- header section starts (compact) -->
+    <header class="header">
 
-        <a href="./index.html" class="logo" style="text-decoration: none;">
+        <a href="./index.html" class="logo">
             <i class="fas fa-shopping-cart"></i> MOBI_HUB
         </a>
-        &nbsp;
-        <nav class="navbar" style="font-size: 1.7rem; margin:0.1%; position:relative; top:10px;">
+
+        <nav class="navbar">
             <a href="./index.html" id="hov">home</a>
             <a href="./index.html#features" id="hov">features</a>
             <a href="./index.html#products" id="hov">products</a>
@@ -162,14 +237,8 @@
         </nav>
 
         <div class="icons">
-            <div class="fas fa-search" id="search-btn"></div>
             <div class="fas fa-shopping-cart" id="cart-btn">&nbsp;<span id="cart-count">0</span></div>
         </div>
-
-        <form action="" class="search-form">
-            <input type="search" id="search-box" placeholder="search here...">
-            <label for="search-box" class="fas fa-search"></label>
-        </form>
 
         <!-- cart panel (filled by js/script.js from localStorage) -->
         <div class="shopping-cart" id="shopping-cart">
@@ -190,7 +259,7 @@
     <!-- header section ends -->
 
     <!-- checkout section starts -->
-    <section id="checkout_page" class="clearfix checkout" style="padding-top:120px;">
+    <section id="checkout_page" class="clearfix checkout" style="padding-top:90px;">
         <div class="container">
             <div class="row">
                 <div class="checkout_1 clearfix">
@@ -407,6 +476,7 @@
     <script>
         // =====================================================
         //  CHECKOUT PAGE SCRIPT
+        //  - Compact responsive header (nav hides on small screens)
         //  - Items (picture, color, qty) on TOP of the summary
         //  - Customer pays ONLY the 3% delivery fee now
         //  - Full order amount is due AFTER delivery
