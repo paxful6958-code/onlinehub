@@ -165,3 +165,79 @@ document.querySelectorAll('#add-cart, .add-cart').forEach(btn => {
         // ...your existing cart logic, pass `color` along
     });
 });
+
+// ---------- CART LOGIC ----------
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function saveCart() {
+    localStorage.setItem("cart", JSON.stringify(cart));
+    renderCart();
+}
+
+function updateCount() {
+    const count = document.getElementById("cart-count");
+    if (count) count.textContent = cart.reduce((s, item) => s + item.qty, 0);
+}
+
+function renderCart() {
+    const cartBox = document.getElementById("shopping-cart");
+    if (!cartBox) return;
+
+    // remove old item boxes (keep total + checkout link)
+    cartBox.querySelectorAll(".box").forEach(b => b.remove());
+
+    let total = 0;
+    cart.forEach((item, index) => {
+        total += item.price * item.qty;
+
+        const box = document.createElement("div");
+        box.className = "box";
+        box.innerHTML = `
+            <i class="fas fa-trash" data-index="${index}" style="cursor:pointer"></i>
+            <img src="${item.image}" alt="${item.name}">
+            <div class="content">
+                <h3>${item.name}</h3>
+                <span class="price">₹ ${item.price.toLocaleString("en-IN")}/-</span>
+                <span class="quantity">qty : ${item.qty}</span>
+                <span class="quantity">color : ${item.color}</span>
+            </div>`;
+        cartBox.prepend(box);
+    });
+
+    const totalEl = cartBox.querySelector(".total");
+    if (totalEl) totalEl.textContent = ` total : ₹ ${total.toLocaleString("en-IN")}/-`;
+
+    updateCount();
+}
+
+// Delete items from cart
+document.addEventListener("click", e => {
+    if (e.target.matches(".fa-trash") && e.target.dataset.index !== undefined) {
+        cart.splice(e.target.dataset.index, 1);
+        saveCart();
+    }
+});
+
+// "Add to cart" buttons — grab data from the parent product card
+document.querySelectorAll(".add-cart-btn").forEach(btn => {
+    btn.addEventListener("click", e => {
+        e.preventDefault();
+        const card = btn.closest(".box");
+
+        const name = card.querySelector("h3").textContent.trim();
+        const image = card.querySelector("img").src;
+        const priceText = card.querySelector(".price").textContent;
+        // extract number, handles $1,199 or ₹45,000/-
+        const price = parseFloat(priceText.replace(/[^0-9.]/g, "")) || 0;
+        const color = card.querySelector(".color-select").value;
+
+        // if same phone + color already in cart, just increase qty
+        const existing = cart.find(i => i.name === name && i.color === color);
+        if (existing) existing.qty++;
+        else cart.push({ name, price, image, color, qty: 1 });
+
+        saveCart();
+    });
+});
+
+renderCart();

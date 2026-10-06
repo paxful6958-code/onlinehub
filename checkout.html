@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Checkout</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/global.css" rel="stylesheet">
+    <link href="./css/checkout.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.icon">
+    <script src="./js/jquery-2.1.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <!-- header section starts -->
+    <header class="header" style="position: fixed;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding:2px 5%;
+background: white; z-index:1000; width:100%;">
+
+        <a href="./index.html" class="logo" style="text-decoration: none;">
+            <i class="fas fa-shopping-cart"></i> MOBILE_HUB
+        </a>
+        &nbsp;
+        <nav class="navbar" style="font-size: 1.7rem; margin:0.1%; position:relative; top:10px;">
+            <a href="./index.html" id="hov" style="position: relative; right:1px; top:5px;">home</a>
+            <a href="./index.html#features" id="hov" style="position: relative; right:1px; top:5px;">features</a>
+            <a href="./index.html#products" id="hov" style="position: relative; right:1px; top:5px;">products</a>
+            <a href="./index.html#categories" id="hov" style="position: relative; right:1px; top:5px;">categories</a>
+            <a href="./index.html#review" id="hov" style="position: relative; right:1px; top:5px;">review</a>
+            <a href="./index.html#blogs" id="hov" style="position: relative; right:1px; top:5px;">blogs</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn">&nbsp;<span id="cart-count">0</span></div>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+        <!-- cart panel (filled by js/script.js from localStorage) -->
+        <div class="shopping-cart" id="shopping-cart">
+            <div class="total"> total : $0/- </div>
+            <a href="checkout.html" class="btn">checkout</a>
+        </div>
+
+        <form action="./checkout.php" method="post" class="login-form">
+            <h3>login now</h3>
+            <input type="email" name="user" id="user" placeholder="your email" class="box">
+            <input type="password" name="pass" id="pass" placeholder="your password" class="box">
+            <p>forget your password <a href="FormValidation.html">click here</a></p>
+            <p>don't have an account <a href="FormValidation.html">create now</a></p>
+            <button type="submit" name="submit" class="btn"> Login Now </button>
+        </form>
+
+    </header>
+    <!-- header section ends -->
+
+    <!-- checkout section starts -->
+    <section id="checkout_page" class="clearfix checkout" style="padding-top:120px;">
+        <div class="container">
+            <div class="row">
+                <div class="checkout_1 clearfix">
+
+                    <!-- LEFT: customer info + payment -->
+                    <div class="col-sm-6">
+                        <div class="check_lm clearfix">
+                            <div class="check_lm1 clearfix">
+                                <ul class="mgt">
+                                    <li><a href="#" id="hov" style="text-decoration: none;">Cart</a> <i class="fa fa-chevron-right"></i></li>
+                                    <li>Information <i class="fa fa-chevron-right"></i></li>
+                                    <li>Shipping <i class="fa fa-chevron-right"></i></li>
+                                    <li>Payment</li>
+                                </ul>
+                            </div><br>
+                            <div class="check_lm2 clearfix">
+                                <div class="col-sm-6 space_left">
+                                    <h4>Contact information</h4>
+                                </div>
+                            </div>
+                            <div class="check_lm3 clearfix">
+                                <input class="form-control" placeholder="Email" type="email" name="email" id="email">
+                                <h5 class="normal"><input class="check_1" type="checkbox"> <span>Keep me up to date on news and exclusive offers</span></h5><br>
+                                <h4>Shipping address</h4>
+                            </div>
+                            <div class="check_lm4 clearfix">
+                                <div class="col-sm-6 space_left">
+                                    <input class="form-control" placeholder="First Name" type="text" name="fname" id="fname">
+                                </div>
+                                <div class="col-sm-6 space_right">
+                                    <input class="form-control" placeholder="Last Name" type="text" name="lname" id="lname">
+                                </div>
+                            </div>
+                            <div class="check_lm4 clearfix">
+                                <input class="form-control" placeholder="Address" type="text" name="address" id="address">
+                                <input class="form-control" placeholder="House No" type="text" name="number" id="house-no">
+                                <input class="form-control" placeholder="City" type="text" id="city">
+                            </div>
+                            <div class="check_lm4 clearfix">
+                                <div class="col-sm-6 space_left">
+                                    <select class="form-control" name="subject" id="country">
+                                        <option>Country</option>
+                                        <option>USA</option>
+                                        <option>UK</option>
+                                        <option>Canada</option>
+                                        <option>Australia</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6 space_right">
+                                    <input class="form-control" placeholder="Phone Number" type="tel" name="phone" id="phone">
+                                </div>
+                            </div>
+                            <div class="check_lm5 clearfix">
+                                <h5 class="normal"><input class="check_1" type="checkbox"> <span>Save this information for next time</span></h5>
+                            </div>
+
+                            <!-- PAYMENT: credit / visa card -->
+                            <div class="check_lm6 clearfix" style="margin-top:30px;">
+                                <h4><i class="fas fa-credit-card"></i> Payment — Credit / Visa Card</h4>
+                                <div class="check_lm4 clearfix" style="margin-top:10px;">
+                                    <input class="form-control" placeholder="Cardholder Name" type="text" name="card_name" id="card-name">
+                                </div>
+                                <div class="check_lm4 clearfix">
+                                    <input class="form-control" placeholder="Card Number (e.g. 4111 1111 1111 1111)" type="text" name="card_number" id="card-number" maxlength="19">
+                                </div>
+                                <div class="check_lm4 clearfix">
+                                    <div class="col-sm-6 space_left">
+                                        <input class="form-control" placeholder="MM / YY" type="text" name="expiry" id="expiry" maxlength="5">
+                                    </div>
+                                    <div class="col-sm-6 space_right">
+                                        <input class="form-control" placeholder="CVV" type="password" name="cvv" id="cvv" maxlength="4">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="checkout_1l3 clearfix">
+                                <hr>
+                                <div class="col-sm-6">
+                                    <h5 class="mgt" style="font-size: 2rem; text-transform: uppercase;">
+                                        <a href="index.html" id="hov" style="text-decoration: none;">Return to cart</a>
+                                    </h5>
+                                </div>
+                                <div class="col-sm-6">
+                                    <h5 class="mgt text-right" style="font-size: 2rem; text-transform: uppercase;">
+                                        <button id="hov" style="text-decoration: none;" onclick="fun()">Pay Now</button>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT: order summary (filled by JS) -->
+                    <div class="col-sm-6">
+                        <div class="check_rm clearfix" id="order-summary">
+                            <div class="checkout_1r1 clearfix">
+                                <div class="checkout_1r1i clearfix">
+                                    <div class="col-sm-6">
+                                        <h5 class="mgt normal" style="font-size: 3rem;">Total</h5>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <h4 class="mgt">
+                                            <span class="col_3" id="order-total" style="color: rgb(215, 16, 16); font-size:3rem;">$0/-</span>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- checkout section ends -->
+
+    <!-- footer section starts -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3> Namaste <i class="fas fa-shopping-cart"></i> </h3>
+                <p>thank you for exploring our webi.</p>
+                <div class="share">
+                    <a target="_blank" href="#" class="fab fa-facebook-f"> </a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="./index.html" class="links"> <i class="fas fa-arrow-right"></i> home </a>
+                <a href="./index.html#features" class="links"> <i class="fas fa-arrow-right"></i> features </a>
+                <a href="./index.html#products" class="links"> <i class="fas fa-arrow-right"></i> products </a>
+                <a href="./index.html#categories" class="links"> <i class="fas fa-arrow-right"></i> categories </a>
+                <a href="./index.html#review" class="links"> <i class="fas fa-arrow-right"></i> review </a>
+                <a href="./index.html#blogs" class="links"> <i class="fas fa-arrow-right"></i> blogs </a>
+            </div>
+            <div class="box">
+                <h3>newsletter</h3>
+                <p>subscribe for latest updates</p>
+                <input type="email" placeholder="your email" class="email">
+                <input type="submit" value="subscribe" class="btn">
+                <img src="image/payment.png" class="payment-img" alt="">
+            </div>
+        </div>
+        <div class="credit"> <span> 2026 </span> | all rights reserved </div>
+    </section>
+    <!-- footer section ends -->
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        // ---------- ORDER SUMMARY FROM CART (USD) ----------
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const summary = document.getElementById("order-summary");
+        const totalEl = document.getElementById("order-total");
+        const totalBox = summary.querySelector(".checkout_1r1");
+        let total = 0;
+
+        if (cart.length === 0) {
+            const empty = document.createElement("div");
+            empty.innerHTML = "<h3 style='padding:20px;'>Your cart is empty. <a href='index.html'>Go shopping</a></h3>";
+            summary.insertBefore(empty, totalBox);
+        } else {
+            cart.forEach(item => {
+                total += item.price * item.qty;
+                const row = document.createElement("div");
+                row.className = "checkout_1r mgt clearfix";
+                row.innerHTML = `
+                    <div class="checkout_1l2 mgt clearfix">
+                        <div class="col-sm-2">
+                            <img src="${item.image}" alt="${item.name}" class="iw" style="width: 90px;">
+                        </div>
+                        <div class="col-sm-7">
+                            <p class="mgt">${item.name}<br>
+                                <small>Color: ${item.color} &nbsp;|&nbsp; Qty: ${item.qty}</small>
+                            </p>
+                        </div>
+                        <div class="col-sm-3">
+                            <h6 class="text-right col_3" style="color: rgb(215, 16, 16); font-size:2rem;">
+                                $${(item.price * item.qty).toLocaleString("en-US")}/-
+                            </h6>
+                        </div>
+                    </div>`;
+                summary.insertBefore(row, totalBox);
+            });
+        }
+
+        totalEl.innerHTML = `$${total.toLocaleString("en-US")}/-`;
+
+        // ---------- CARD NUMBER AUTO-FORMAT (spaces every 4 digits) ----------
+        document.getElementById("card-number").addEventListener("input", e => {
+            let value = e.target.value.replace(/\D/g, "").substring(0, 16);
+            e.target.value = value.replace(/(.{4})/g, "$1 ").trim();
+        });
+
+        // ---------- EXPIRY AUTO-FORMAT (MM/YY) ----------
+        document.getElementById("expiry").addEventListener("input", e => {
+            let value = e.target.value.replace(/\D/g, "").substring(0, 4);
+            e.target.value = value.length > 2 ? value.substring(0, 2) + "/" + value.substring(2) : value;
+        });
+
+        // ---------- PLACE ORDER (validates everything first) ----------
+        function fun() {
+            // basic shipping validation
+            const required = ["email", "fname", "lname", "address", "house-no", "city", "phone"];
+            for (const id of required) {
+                const el = document.getElementById(id);
+                if (!el.value.trim()) {
+                    swal("Missing information", `Please fill in: ${el.placeholder}`, "warning");
+                    el.focus();
+                    return;
+                }
+            }
+
+            // phone must be digits (7-15)
+            const phone = document.getElementById("phone").value.trim();
+            if (!/^[0-9+\-\s()]{7,15}$/.test(phone)) {
+                swal("Invalid phone number", "Please enter a valid phone number", "warning");
+                return;
+            }
+
+            // payment validation
+            const cardName = document.getElementById("card-name").value.trim();
+            const cardNumber = document.getElementById("card-number").value.replace(/\s/g, "");
+            const expiry = document.getElementById("expiry").value;
+            const cvv = document.getElementById("cvv").value.trim();
+
+            if (!cardName) {
+                swal("Payment", "Please enter the cardholder name", "warning");
+                return;
+            }
+
+            // Luhn check — validates Visa/Mastercard/Amex numbers
+            if (!/^\d{13,16}$/.test(cardNumber) || !luhnCheck(cardNumber)) {
+                swal("Payment", "Please enter a valid card number", "warning");
+                return;
+            }
+
+            const expMatch = expiry.match(/^(0[1-9]|1[0-2])\/(\d{2})$/);
+            if (!expMatch) {
+                swal("Payment", "Expiry must be in MM/YY format", "warning");
+                return;
+            }
+
+            const expDate = new Date(2000 + parseInt(expMatch[2]), parseInt(expMatch[1]) - 1, 1);
+            if (expDate < new Date()) {
+                swal("Payment", "Your card has expired", "warning");
+                return;
+            }
+
+            if (!/^\d{3,4}$/.test(cvv)) {
+                swal("Payment", "Please enter a valid CVV", "warning");
+                return;
+            }
+
+            swal({
+                    title: "Confirm payment",
+                    text: `Pay $${total.toLocaleString("en-US")}/- with your card ending in ${cardNumber.slice(-4)}?`,
+                    icon: "info",
+                    buttons: true,
+                })
+                .then((willPay) => {
+                    if (willPay) {
+                        localStorage.removeItem("cart"); // clear the cart
+                        swal("Payment successful!", "Your order has been placed", "success")
+                            .then(() => location.reload());
+                    } else {
+                        swal("Payment cancelled", "", "warning");
+                    }
+                });
+        }
+
+        // Luhn algorithm for card validation
+        function luhnCheck(num) {
+            let sum = 0;
+            for (let i = 0; i < num.length; i++) {
+                let digit = parseInt(num[num.length - 1 - i]);
+                if (i % 2 === 1) {
+                    digit *= 2;
+                    if (digit > 9) digit -= 9;
+                }
+                sum += digit;
+            }
+            return sum % 10 === 0;
+        }
+
+        // ---------- HEADER TOGGLES (null-safe) ----------
+        let searchForm = document.querySelector('.search-form');
+        let shoppingCart = document.querySelector('.shopping-cart');
+        let loginForm = document.querySelector('.login-form');
+        let navbar = document.querySelector('.navbar');
+
+        document.querySelector('#search-btn') ? .addEventListener('click', () => {
+            searchForm.classList.toggle('active');
+            shoppingCart ? .classList.remove('active');
+            loginForm ? .classList.remove('active');
+            navbar ? .classList.remove('active');
+        });
+
+        document.querySelector('#cart-btn') ? .addEventListener('click', () => {
+            shoppingCart ? .classList.toggle('active');
+            searchForm.classList.remove('active');
+            loginForm ? .classList.remove('active');
+            navbar ? .classList.remove('active');
+        });
+
+        document.querySelector('#login-btn') ? .addEventListener('click', () => {
+            loginForm ? .classList.toggle('active');
+            searchForm.classList.remove('active');
+            shoppingCart ? .classList.remove('active');
+            navbar ? .classList.remove('active');
+        });
+
+        document.querySelector('#menu-btn') ? .addEventListener('click', () => {
+            navbar ? .classList.toggle('active');
+            searchForm.classList.remove('active');
+            shoppingCart ? .classList.remove('active');
+            loginForm ? .classList.remove('active');
+        });
+
+        window.onscroll = () => {
+            searchForm ? .classList.remove('active');
+            shoppingCart ? .classList.remove('active');
+            loginForm ? .classList.remove('active');
+            navbar ? .classList.remove('active');
+        };
+    </script>
+
+    <!-- shared cart script (fills header cart panel + counter) -->
+    <script src="./js/script.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+</body>
+
+</html>

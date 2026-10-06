@@ -722,3 +722,17 @@ section {
     border-color: #e79d21;
     box-shadow: 0 0 0 2px rgba(231, 157, 33, .35);
 }
+
+.box .price {
+    font-size: 2rem;
+    color: #e84393;
+    font-weight: bold;
+    padding: .5rem 0;
+}
+
+.box .price span {
+    font-size: 1.5rem;
+    color: #999;
+    text-decoration: line-through;
+    margin-left: .5rem;
+}
