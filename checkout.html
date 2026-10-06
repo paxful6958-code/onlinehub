@@ -16,17 +16,137 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.icon">
     <script src="./js/jquery-2.1.1.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+    <style>
+        /* ---------- CVV fix: match form-control look & width ---------- */
+        
+        #cvv {
+            width: 100%;
+            height: 34px;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #555;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        }
+        /* ---------- Pay button ---------- */
+        
+        #pay-btn {
+            display: inline-block;
+            padding: 10px 25px;
+            background: rgb(215, 16, 16);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        
+        #pay-btn:hover {
+            background: rgb(180, 10, 10);
+        }
+        /* ---------- OTP modal (forced center) ---------- */
+        
+        #otp-overlay {
+            display: none !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            background: rgba(0, 0, 0, 0.6) !important;
+            z-index: 99999 !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+        
+        #otp-overlay.show {
+            display: flex !important;
+        }
+        
+        #otp-overlay .otp-box {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+            margin: 0 !important;
+            float: none !important;
+            position: relative !important;
+            top: auto !important;
+            left: auto !important;
+            transform: none !important;
+        }
+        
+        #otp-overlay .otp-box h3 {
+            margin-bottom: 10px;
+        }
+        
+        #otp-overlay .otp-box p {
+            color: #777;
+            font-size: 1.4rem;
+        }
+        
+        #otp-input {
+            width: 100%;
+            font-size: 2.4rem;
+            letter-spacing: 8px;
+            text-align: center;
+            padding: 10px;
+            margin: 15px 0;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+        }
+        
+        #otp-input:focus {
+            outline: none;
+            border-color: rgb(215, 16, 16);
+        }
+        
+        .otp-btns {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .otp-btns button {
+            flex: 1;
+            padding: 10px;
+            font-size: 1.5rem;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        #otp-verify {
+            background: rgb(215, 16, 16);
+            color: #fff;
+        }
+        
+        #otp-cancel {
+            background: #eee;
+            color: #333;
+        }
+        
+        .otp-error {
+            color: rgb(215, 16, 16);
+            font-size: 1.3rem;
+            min-height: 18px;
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 
 <body>
 
     <!-- header section starts -->
-    <header class="header" style="position: fixed;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding:2px 5%;
-        background: white; z-index:1000; width:100%;">
+    <header class="header" style="position: fixed; display: flex; align-items: center; justify-content: space-between; padding:2px 5%; background: white; z-index:1000; width:100%;">
 
         <a href="./index.html" class="logo" style="text-decoration: none;">
             <i class="fas fa-shopping-cart"></i> MOBI_HUB
@@ -133,9 +253,13 @@
                                 <h5 class="normal"><input class="check_1" type="checkbox"> <span>Save this information for next time</span></h5>
                             </div>
 
-                            <!-- PAYMENT: credit / visa card -->
+                            <!-- PAYMENT: delivery fee only (credit / visa card) -->
                             <div class="check_lm6 clearfix" style="margin-top:30px;">
-                                <h4><i class="fas fa-credit-card"></i> Payment — Credit / Visa Card</h4>
+                                <h4><i class="fas fa-credit-card"></i> Payment — Delivery Fee Only</h4>
+                                <p class="normal" style="font-size:1.4rem; color:#777;">
+                                    Pay only the <b>3% delivery fee</b> now. The full order amount is
+                                    <b>paid after delivery</b> (cash on delivery).
+                                </p>
                                 <div class="check_lm4 clearfix" style="margin-top:10px;">
                                     <input class="form-control" placeholder="Cardholder Name" type="text" name="card_name" id="card-name">
                                 </div>
@@ -147,7 +271,7 @@
                                         <input class="form-control" placeholder="MM / YY" type="text" name="expiry" id="expiry" maxlength="5" inputmode="numeric">
                                     </div>
                                     <div class="col-sm-6 space_right">
-                                        <input class="number-input" placeholder="CVV" type="password" name="cvv" id="cvv" maxlength="4" inputmode="numeric">
+                                        <input type="password" placeholder="CVV" name="cvv" id="cvv" maxlength="4" inputmode="numeric">
                                     </div>
                                 </div>
                             </div>
@@ -159,31 +283,65 @@
                                         <a href="./index.html" id="hov" style="text-decoration: none;">Return to cart</a>
                                     </h5>
                                 </div>
-                                <div class="col-sm-6">
-                                    <h5 class="mgt text-right" style="font-size: 2rem; text-transform: uppercase;">
-                                        <button id="hov" type="button" style="text-decoration: none;" onclick="fun()">Pay Now</button>
-                                    </h5>
+                                <div class="col-sm-6 text-right">
+                                    <button id="pay-btn" type="button" onclick="startPayment()">Pay Delivery Fee</button>
                                 </div>
                             </div>
 
                         </div>
                     </div>
 
-                    <!-- RIGHT: order summary (filled by inline JS below) -->
+                    <!-- RIGHT: order summary (items on top, then totals) -->
                     <div class="col-sm-6">
                         <div class="check_rm clearfix" id="order-summary">
+
+                            <!-- items get injected here (pictures, color, qty) -->
+
                             <div class="checkout_1r1 clearfix">
                                 <div class="checkout_1r1i clearfix">
                                     <div class="col-sm-6">
-                                        <h5 class="mgt normal" style="font-size: 3rem;">Total</h5>
+                                        <h5 class="mgt normal" style="font-size: 2.4rem;">Order Total</h5>
                                     </div>
+                                    <div class="col-sm-6 text-right">
+                                        <h4 class="mgt"><span id="order-subtotal">$0/-</span></h4>
+                                    </div>
+                                </div>
+                                <div class="checkout_1r1i clearfix">
                                     <div class="col-sm-6">
+                                        <h5 class="mgt normal" style="font-size: 2.4rem;">Delivery Fee (3%)</h5>
+                                    </div>
+                                    <div class="col-sm-6 text-right">
                                         <h4 class="mgt">
-                                            <span class="col_3" id="order-total" style="color: rgb(215, 16, 16); font-size:3rem;">$0/-</span>
+                                            <span class="col_3" id="order-delivery" style="color: rgb(215, 16, 16); font-size:2.4rem;">$0/-</span>
                                         </h4>
                                     </div>
                                 </div>
+                                <div class="checkout_1r1i clearfix">
+                                    <div class="col-sm-6">
+                                        <h5 class="mgt normal" style="font-size: 2.4rem;">Pay Now (Delivery Fee)</h5>
+                                    </div>
+                                    <div class="col-sm-6 text-right">
+                                        <h4 class="mgt">
+                                            <span class="col_3" id="order-paynow" style="color: rgb(215, 16, 16); font-size:2.6rem;">$0/-</span>
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="checkout_1r1i clearfix">
+                                    <div class="col-sm-6">
+                                        <h5 class="mgt normal" style="font-size: 3rem;">Due After Delivery</h5>
+                                    </div>
+                                    <div class="col-sm-6 text-right">
+                                        <h4 class="mgt">
+                                            <span id="order-total" style="font-size:3rem;">$0/-</span>
+                                        </h4>
+                                    </div>
+                                </div>
+                                <hr>
+                                <p class="normal" style="font-size:1.4rem; color:#555;">
+                                    <i class="fas fa-truck"></i> You pay only the delivery fee today. The full order amount is collected when your order is delivered.
+                                </p>
                             </div>
+
                         </div>
                     </div>
 
@@ -192,6 +350,20 @@
         </div>
     </section>
     <!-- checkout section ends -->
+
+    <!-- ============ OTP MODAL ============ -->
+    <div id="otp-overlay">
+        <div class="otp-box">
+            <h3><i class="fas fa-shield-alt"></i> Verify Payment</h3>
+            <p>Enter the 4–6 digit OTP sent to your registered phone/email</p>
+            <div class="otp-error" id="otp-error"></div>
+            <input type="password" id="otp-input" maxlength="6" inputmode="numeric" placeholder="••••" autocomplete="one-time-code">
+            <div class="otp-btns">
+                <button type="button" id="otp-cancel" onclick="closeOtp()">Cancel</button>
+                <button type="button" id="otp-verify" onclick="verifyOtp()">Verify &amp; Pay</button>
+            </div>
+        </div>
+    </div>
 
     <!-- footer section starts -->
     <section class="footer">
@@ -211,17 +383,19 @@
             <div class="box">
                 <h3>quick links</h3>
                 <a href="./index.html" class="links"> <i class="fas fa-arrow-right"></i> home </a>
-                <a href="./index.html#features" class="links">
-                    < indentation is correct now>
-                </a>
+                <a href="./index.html#features" class="links"> <i class="fas fa-arrow-right"></i> features </a>
+                <a href="./index.html#products" class="links"> <i class="fas fa-arrow-right"></i> products </a>
+                <a href="./index.html#categories" class="links"> <i class="fas fa-arrow-right"></i> categories </a>
+                <a href="./index.html#review" class="links"> <i class="fas fa-arrow-right"></i> review </a>
+                <a href="./index.html#blogs" class="links"> <i class="fas fa-arrow-right"></i> blogs </a>
             </div>
 
-            <div box-container has class="box">
+            <div class="box">
                 <h3>newsletter</h3>
                 <p>subscribe for latest updates</p>
                 <input type="email" placeholder="your email" class="email">
                 <input type="submit" value="subscribe" class="btn">
-                <img src="image/payment.png" class="payment-img" placeholder="" class="payment-img" alt="">
+                <img src="image/payment.png" class="payment-img" alt="">
             </div>
 
         </div>
@@ -232,11 +406,15 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
         // =====================================================
-        //  CHECKOUT PAGE SCRIPT (self-contained, no globals that
-        //  clash with js/script.js)
+        //  CHECKOUT PAGE SCRIPT
+        //  - Items (picture, color, qty) on TOP of the summary
+        //  - Customer pays ONLY the 3% delivery fee now
+        //  - Full order amount is due AFTER delivery
+        //  - Pay -> OTP (4-6 digits) -> success
         // =====================================================
 
-        // ---------- ORDER SUMMARY FROM CART (USD) ----------
+        const DELIVERY_RATE = 0.03; // 3% delivery fee
+
         (function() {
             let checkoutCart = [];
             try {
@@ -247,6 +425,9 @@
             }
 
             const summary = document.getElementById("order-summary");
+            const subtotalEl = document.getElementById("order-subtotal");
+            const deliveryEl = document.getElementById("order-delivery");
+            const payNowEl = document.getElementById("order-paynow");
             const totalEl = document.getElementById("order-total");
             const totalBox = summary.querySelector(".checkout_1r1");
             let total = 0;
@@ -257,7 +438,9 @@
                 summary.insertBefore(empty, totalBox);
             } else {
                 checkoutCart.forEach(item => {
-                    total += item.price * item.qty;
+                    const lineTotal = item.price * item.qty;
+                    total += lineTotal;
+
                     const row = document.createElement("div");
                     row.className = "checkout_1r mgt clearfix";
                     row.innerHTML = `
@@ -269,10 +452,10 @@
                                 <p class="mgt">${item.name}<br>
                                     <small>Color: ${item.color} &nbsp;|&nbsp; Qty: ${item.qty}</small>
                                 </p>
-            </div>
+                            </div>
                             <div class="col-sm-3">
                                 <h6 class="text-right col_3" style="color: rgb(215, 16, 16); font-size:2rem;">
-                                    $${(item.price * item.qty).toLocaleString("en-US")}/-
+                                    $${lineTotal.toLocaleString("en-US", {minimumFractionDigits: 2})}/-
                                 </h6>
                             </div>
                         </div>`;
@@ -280,7 +463,16 @@
                 });
             }
 
-            totalEl.innerHTML = `$${total.toLocaleString("en-US")}/-`;
+            const deliveryFee = total * DELIVERY_RATE;
+
+            subtotalEl.textContent = `$${total.toLocaleString("en-US", {minimumFractionDigits: 2})}/-`;
+            deliveryEl.textContent = `$${deliveryFee.toLocaleString("en-US", {minimumFractionDigits: 2})}/-`;
+            payNowEl.textContent = `$${deliveryFee.toLocaleString("en-US", {minimumFractionDigits: 2})}/-`;
+            totalEl.textContent = `$${total.toLocaleString("en-US", {minimumFractionDigits: 2})}/-`;
+
+            // Button charges ONLY the delivery fee
+            const payBtn = document.getElementById("pay-btn");
+            payBtn.textContent = `Pay $${deliveryFee.toLocaleString("en-US", {minimumFractionDigits: 2})} Delivery Fee`;
         })();
 
         // ---------- CARD NUMBER AUTO-FORMAT (spaces every 4 digits) ----------
@@ -290,10 +482,71 @@
         });
 
         // ---------- EXPIRY AUTO-FORMAT (MM/YY) ----------
-        document.getElementById("expiry").checkout_html.py
+        document.getElementById("expiry").addEventListener("input", e => {
+            let value = e.target.value.replace(/\D/g, "").substring(0, 4);
+            e.target.value = value.length >= 3 ?
+                value.substring(0, 2) + "/" + value.substring(2) :
+                value;
+        });
+
+        // ---------- CVV: digits only ----------
+        document.getElementById("cvv").addEventListener("input", e => {
+            e.target.value = e.target.value.replace(/\D/g, "").substring(0, 4);
+        });
+
+        // ---------- OTP: digits only, 4-6 ----------
+        const otpInput = document.getElementById("otp-input");
+        otpInput.addEventListener("input", e => {
+            e.target.value = e.target.value.replace(/\D/g, "").substring(0, 6);
+        });
+        otpInput.addEventListener("keydown", e => {
+            if (e.key === "Enter") verifyOtp();
+        });
+
+        // ---------- PAYMENT FLOW ----------
+        function startPayment() {
+            const cardName = document.getElementById("card-name").value.trim();
+            const cardNumber = document.getElementById("card-number").value.replace(/\s/g, "");
+            const expiry = document.getElementById("expiry").value.trim();
+            const cvv = document.getElementById("cvv").value.trim();
+
+            if (!cardName || cardNumber.length !== 16 || expiry.length !== 5 || cvv.length < 3) {
+                swal("Oops!", "Please fill in valid card details before paying.", "error");
+                return;
+            }
+
+            // Open OTP modal (centered)
+            document.getElementById("otp-error").textContent = "";
+            otpInput.value = "";
+            document.getElementById("otp-overlay").classList.add("show");
+            otpInput.focus();
+        }
+
+        function closeOtp() {
+            document.getElementById("otp-overlay").classList.remove("show");
+        }
+
+        function verifyOtp() {
+            const otp = otpInput.value.trim();
+            if (otp.length < 4 || otp.length > 6) {
+                document.getElementById("otp-error").textContent = "OTP must be 4 to 6 digits.";
+                return;
+            }
+
+            // TODO: send OTP + delivery-fee payment to your server
+            // (e.g. fetch("./verify-otp.php", { method: "POST", body: ... }))
+            // For now, accept any 4-6 digit OTP as valid.
+            closeOtp();
+
+            swal("Delivery Fee Paid!", "Your order has been placed. The full amount will be collected after delivery. Thank you!", "success")
+                .then(() => {
+                    localStorage.removeItem("cart");
+                    window.location.href = "./index.html";
+                });
+        }
     </script>
     <script src="./js/script.js"></script>
-    <script src=" garbage
+
 </body>
 
 </html>
