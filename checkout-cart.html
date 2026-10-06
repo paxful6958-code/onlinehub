@@ -58,20 +58,12 @@
         .header .icons span {
             font-size: 1.2rem;
         }
-        /* hide search box + cart panel + login form by default (compact header) */
         
-        .header .search-form {
-            display: none;
-        }
-        
-        .header .shopping-cart {
-            display: none;
-        }
-        
+        .header .search-form,
+        .header .shopping-cart,
         .header .login-form {
             display: none;
         }
-        /* ---------- SMALL DEVICES: header shrinks, nav disappears ---------- */
         
         @media (max-width: 768px) {
             .header {
@@ -79,7 +71,6 @@
             }
             .header .navbar {
                 display: none;
-                /* nav links disappear on small screens */
             }
             .header .logo {
                 font-size: 1.3rem;
@@ -87,41 +78,139 @@
             .header .icons div {
                 font-size: 1.4rem;
             }
-            /* page content no longer hidden under the header */
             #checkout_page {
                 padding-top: 70px !important;
             }
         }
-        /* ================= CVV FIX ================= */
+        /* ================= BEAUTIFUL FORM INPUTS ================= */
         
+        .form-control,
         #cvv {
             width: 100%;
-            height: 34px;
-            padding: 6px 12px;
-            font-size: 14px;
-            line-height: 1.42857143;
-            color: #555;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            height: 44px;
+            padding: 10px 14px;
+            font-size: 15px;
+            color: #333;
+            background-color: #fafafa;
+            border: 1.5px solid #e0e0e0;
+            border-radius: 10px;
+            box-shadow: none;
+            transition: all 0.25s ease;
+            margin-bottom: 12px;
         }
-        /* ================= PAY BUTTON ================= */
+        
+        .form-control::placeholder,
+        #cvv::placeholder {
+            color: #aaa;
+        }
+        
+        .form-control:hover,
+        #cvv:hover {
+            border-color: #c7c7c7;
+            background-color: #fff;
+        }
+        
+        .form-control:focus,
+        #cvv:focus {
+            outline: none;
+            border-color: rgb(215, 16, 16);
+            background-color: #fff;
+            box-shadow: 0 0 0 3px rgba(215, 16, 16, 0.12);
+        }
+        
+        select.form-control {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 16px;
+        }
+        /* ================= CARD INPUT WRAP (card icons + grouping) ================= */
+        
+        .card-fields {
+            background: #fff;
+            border: 1.5px solid #ececec;
+            border-radius: 14px;
+            padding: 18px 16px 6px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+            margin-top: 14px;
+        }
+        
+        .card-fields .form-control,
+        .card-fields #cvv {
+            background-color: #f7f7f8;
+            border-color: #e4e4e6;
+        }
+        
+        .card-fields .form-control:focus,
+        .card-fields #cvv:focus {
+            background-color: #fff;
+        }
+        /* card number with brand icon inside */
+        
+        .card-number-wrap {
+            position: relative;
+        }
+        
+        .card-number-wrap .fa-credit-card {
+            position: absolute;
+            right: 14px;
+            top: 13px;
+            color: #b9b9b9;
+            font-size: 16px;
+            pointer-events: none;
+        }
+        
+        .card-number-wrap input {
+            padding-right: 40px;
+        }
+        /* ================= BEAUTIFUL BUTTONS ================= */
+        
+        .btn-beauty {
+            display: inline-block;
+            padding: 12px 28px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            text-decoration: none;
+        }
+        /* gradient pay button */
         
         #pay-btn {
-            display: inline-block;
-            padding: 10px 25px;
-            background: rgb(215, 16, 16);
+            background: linear-gradient(135deg, rgb(235, 30, 30) 0%, rgb(190, 10, 10) 100%);
             color: #fff;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.6rem;
-            text-transform: uppercase;
-            cursor: pointer;
+            box-shadow: 0 6px 16px rgba(215, 16, 16, 0.35);
         }
         
         #pay-btn:hover {
-            background: rgb(180, 10, 10);
+            background: linear-gradient(135deg, rgb(220, 20, 20) 0%, rgb(165, 5, 5) 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 9px 22px rgba(215, 16, 16, 0.4);
+        }
+        
+        #pay-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 10px rgba(215, 16, 16, 0.3);
+        }
+        /* outline "return to cart" button */
+        
+        .btn-outline {
+            background: transparent;
+            color: rgb(215, 16, 16);
+            border: 2px solid rgb(215, 16, 16);
+        }
+        
+        .btn-outline:hover {
+            background: rgb(215, 16, 16);
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(215, 16, 16, 0.25);
         }
         /* ================= OTP MODAL (forced center) ================= */
         
@@ -146,12 +235,12 @@
         
         #otp-overlay .otp-box {
             background: #fff;
-            padding: 30px;
-            border-radius: 10px;
+            padding: 32px 28px;
+            border-radius: 16px;
             width: 90%;
             max-width: 400px;
             text-align: center;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
             margin: 0 !important;
             float: none !important;
             position: relative !important;
@@ -171,42 +260,58 @@
         
         #otp-input {
             width: 100%;
-            font-size: 2.4rem;
-            letter-spacing: 8px;
+            font-size: 2.6rem;
+            letter-spacing: 10px;
             text-align: center;
-            padding: 10px;
+            padding: 12px;
             margin: 15px 0;
-            border: 2px solid #ccc;
-            border-radius: 6px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            background: #fafafa;
+            transition: all 0.25s ease;
         }
         
         #otp-input:focus {
             outline: none;
             border-color: rgb(215, 16, 16);
+            background: #fff;
+            box-shadow: 0 0 0 3px rgba(215, 16, 16, 0.12);
         }
         
         .otp-btns {
             display: flex;
-            gap: 10px;
+            gap: 12px;
+            margin-top: 6px;
         }
         
         .otp-btns button {
             flex: 1;
-            padding: 10px;
+            padding: 12px;
             font-size: 1.5rem;
-            border-radius: 5px;
+            border-radius: 10px;
             border: none;
             cursor: pointer;
+            transition: all 0.25s ease;
         }
         
         #otp-verify {
-            background: rgb(215, 16, 16);
+            background: linear-gradient(135deg, rgb(235, 30, 30) 0%, rgb(190, 10, 10) 100%);
             color: #fff;
+            box-shadow: 0 5px 14px rgba(215, 16, 16, 0.3);
+        }
+        
+        #otp-verify:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(215, 16, 16, 0.4);
         }
         
         #otp-cancel {
-            background: #eee;
-            color: #333;
+            background: #f0f0f0;
+            color: #444;
+        }
+        
+        #otp-cancel:hover {
+            background: #e2e2e2;
         }
         
         .otp-error {
@@ -214,6 +319,12 @@
             font-size: 1.3rem;
             min-height: 18px;
             margin-bottom: 5px;
+        }
+        /* section headings get a subtle accent */
+        
+        .check_lm6 h4 i,
+        .check_lm3 h4 {
+            color: #333;
         }
     </style>
 </head>
@@ -329,18 +440,22 @@
                                     Pay only the <b>3% delivery fee</b> now. The full order amount is
                                     <b>paid after delivery</b> (cash on delivery).
                                 </p>
-                                <div class="check_lm4 clearfix" style="margin-top:10px;">
+
+                                <div class="card-fields">
                                     <input class="form-control" placeholder="Cardholder Name" type="text" name="card_name" id="card-name">
-                                </div>
-                                <div class="check_lm4 clearfix">
-                                    <input class="form-control" placeholder="Card Number (e.g. 4111 1111 1111 1111)" type="text" name="card_number" id="card-number" maxlength="19" inputmode="numeric">
-                                </div>
-                                <div class="check_lm4 clearfix">
-                                    <div class="col-sm-6 space_left">
-                                        <input class="form-control" placeholder="MM / YY" type="text" name="expiry" id="expiry" maxlength="5" inputmode="numeric">
+
+                                    <div class="card-number-wrap">
+                                        <input class="form-control" placeholder="Card Number (e.g. 4111 1111 1111 1111)" type="text" name="card_number" id="card-number" maxlength="19" inputmode="numeric">
+                                        <i class="fas fa-credit-card"></i>
                                     </div>
-                                    <div class="col-sm-6 space_right">
-                                        <input type="password" placeholder="CVV" name="cvv" id="cvv" maxlength="4" inputmode="numeric">
+
+                                    <div class="row">
+                                        <div class="col-sm-6 space_left">
+                                            <input class="form-control" placeholder="MM / YY" type="text" name="expiry" id="expiry" maxlength="5" inputmode="numeric">
+                                        </div>
+                                        <div class="col-sm-6 space_right">
+                                            <input type="password" placeholder="CVV" name="cvv" id="cvv" maxlength="4" inputmode="numeric">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -348,12 +463,10 @@
                             <div class="checkout_1l3 clearfix">
                                 <hr>
                                 <div class="col-sm-6">
-                                    <h5 class="mgt" style="font-size: 2rem; text-transform: uppercase;">
-                                        <a href="./index.html" id="hov" style="text-decoration: none;">Return to cart</a>
-                                    </h5>
+                                    <a href="./index.html" class="btn-beauty btn-outline">Return to Cart</a>
                                 </div>
                                 <div class="col-sm-6 text-right">
-                                    <button id="pay-btn" type="button" onclick="startPayment()">Pay Delivery Fee</button>
+                                    <button id="pay-btn" class="btn-beauty" type="button" onclick="startPayment()">Pay Delivery Fee</button>
                                 </div>
                             </div>
 
