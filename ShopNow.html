@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MOBILE_HUB</title>
+    <title>MOPHONES_HUB</title>
 
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
 
@@ -14,11 +14,14 @@
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/global.css">
 
     <!-- title Icon-->
     <link rel="icon" href="./image/banner.jpg" type="image/icon">
 
+
     <link rel="shortcut icon" type="image/x-icon" href="favicon.icon">
+
 </head>
 
 <body>
@@ -32,20 +35,20 @@ padding:2px 5%;
 justify-content: space-between;
 background:white;">
 
-        <a href="./index.html" class="logo"> <i class="fas fa-shopping-cart"></i> MOBILE_HUB </a>
+        <a href="#" class="logo"> <i class="fas fa-shopping-cart"></i> MOBI_HUB </a>
         &nbsp;
         <nav class="navbar" style="
     font-size: 1.7rem;
     margin:0.1%;">
             <a href="#home" id="hov">home</a>
             <a href="#features" id="hov">features</a>
-            <a href="#products" id="hov">products</a>
+            <a href="./misc.html" id="hov">products</a>
             <a href="#categories" id="hov">categories</a>
             <a href="#review" id="hov">review</a>
             <a href="#blogs" id="hov">blogs</a>
         </nav>
-
         <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
             <div class="fas fa-search" id="search-btn"></div>
             <div class="fas fa-shopping-cart" id="cart-btn">&nbsp;<span>0</span></div>
         </div>
@@ -61,40 +64,37 @@ background:white;">
                 <img alt="Realme GT Neo 3 MORE PICTURES" src=https://fdn2.gsmarena.com/vv/bigpic/realme-gt-neo3-new.jpg>
                 <div class="content">
                     <h3>Realme GT Neo 3</h3>
-                    <span class="price"> $542</span>
+                    <span class="price"> &#8377 45,000/-</span>
                     <span class="quantity">qty : 1</span>
                 </div>
             </div>
-
             <div class="box">
                 <i class="fas fa-trash"></i>
                 <img alt="Samsung Galaxy S22 5G MORE PICTURES" src=https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s22-5g.jpg>
                 <div class="content">
                     <h3> Samsung S22</h3>
-                    <span class="price"> $1,145</span>
-                    <span class="quantity">qty : 1</span>
+                    <span class="price"> &#8377 95,000/-</span>
+                    <span class="quantity">qty : <span class="add">1</span></span>
                 </div>
             </div>
-
             <div class="box">
                 <i class="fas fa-trash"></i>
                 <img alt="Apple iPhone 13
                     MORE PICTURES" src=https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13.jpg>
                 <div class="content">
                     <h3>iPhone 13</h3>
-                    <span class="price"> $832</span>
+                    <span class="price"> &#8377 69,000/-</span>
                     <span class="quantity">qty : 1</span>
                 </div>
             </div>
-
-            <div class="total"> total : $2,518 </div>
-            <a href="checkout.html" class="btn">checkout</a>
+            <div class="total"> total : &#8377 209,000/- </div>
+            <a href="./checkout-cart.html" class="btn">checkout</a>
         </div>
 
-        <form action="./connect.php" class="login-form">
+        <form action="./connect.php" class="login-form" method="post">
             <h3>login now</h3>
-            <input type="email" name="user" id="user" placeholder="your email" class="box">
-            <input type="password" name="pass" id="pass" placeholder="your password" class="box">
+            <input type="email" name="user" id="user" placeholder="user" class="box">
+            <input type="password" name="pass" id="pass" placeholder="pass" class="box">
             <p>forget your password <a href="FormValidation.html">click here</a></p>
             <p>don't have an account <a href="FormValidation.html">create now</a></p>
             <button type="submit" name="submit" class="btn"> Login Now </button>
@@ -111,1247 +111,276 @@ background:white;">
         <div class="content">
             <h3>Brand New and <span>Latest</span> products for you</h3>
             <p style="color:aliceblue ;">When it comes to business store, our store provides you with latest and first handle models. &nbsp; Still Confuse? Look for More below.</p>
+            <a href="ShopNow.html" class="btn">shop now</a>
         </div>
 
     </section>
 
     <!-- home section ends -->
 
-    <!-- Shop section starts  -->
+    <!-- features section starts  -->
 
     <section class="features" id="features">
 
-        <h1 class="heading"><span>Realme</span> </h1>
+        <h1 class="heading"> our <span>features</span> </h1>
 
         <div class="box-container">
 
             <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/realme-10-pro-plus.jpg" alt="">
-                <h3>Realme 10 Pro+</h3>
-                <p>Dimensity 1080 Chipset<br> 67W SuperVOOC Charger <br> 108MP ProLight Camera <br> Ram and Storage: 16GB,256GB!</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
+                <img src="https://img.freepik.com/free-vector/home-screen-concept-illustration_114360-4703.jpg?size=338&ext=jpg&ga=GA1.2.772795766.1662874112&semt=sph" alt="">
+                <h3>Latest And Futuristic</h3>
+                <p>Are you interested in being Tech Savvy? Then You are in right place! Boom!</p>
+                <a href="./Dio_Prank.html" class="btn">read more</a>
             </div>
 
             <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/realme-c33.jpg" alt="">
-                <h3> Realme C33</h3>
-                <p>Unisoc T616 Processor <br> 18W Quick Charger <br> 50MP Ai triple Camera <br> Ram and Storage: 4/6GB,64/128GB</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
+                <img src="https://img.freepik.com/free-vector/way-concept-illustration_114360-1191.jpg?size=626&ext=jpg&ga=GA1.2.772795766.1662874112&semt=sph" alt="">
+                <h3>Free delivery</h3>
+                <p>Your comfort our responsibility. We Provide free delivery across the country!</p>
+                <a href="./Dio_Prank.html" class="btn">read more</a>
             </div>
 
             <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/realme-narzo-50i-prime.jpg" alt="">
-                <h3>Narzo 50i Prime</h3>
-                <p>Unisoc Octa-core Processor <br> 5000mAh battery <br> 8MP Ai Camera <br> Ram and Storage: 3/4GB,32/64GB</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/realme-narzo-50-pro-5g.jpg" alt="">
-                <h3>Narzo 50 Pro</h3>
-                <p>Dimensity 810 Processor <br> 33W Dart Charger <br> 48MP Ultra HD Camera <br> Ram and Storage: 4/6GB,64/128GB</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/realme-gt-neo3-new.jpg" alt="">
-                <h3>Realme GT Neo 3</h3>
-                <p>dimensity 8100 Processor <br> 80W SuperDart Charger <br> Sony IMX766 OIS Camera <br> Ram and Storage: 12GB,256GB</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/realme-9i-r1.jpg" alt="">
-                <h3>Realme 9i</h3>
-                <p>Qualcomm Snapdragon 680 <br> 33W Dart Charger <br> 50MP Ai triple Camera <br> Ram and Storage: 4/6GB,64/128GB</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/realme-v11-s-5g.jpg" alt="">
-                <h3>Realme V11s 5G</h3>
-                <p>Qualcomm Snapdragon 680 <br> 33W Dart Charger <br> 50MP Ai triple Camera <br> Ram and Storage: 4/6GB,64/128GB</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/realme-narzo-50a-prime.jpg" alt="">
-                <h3>Narzo 50A Prime</h3>
-                <p>MediaTek Helio G96<br> 33W Dart Charger <br> 50MP Ai triple Camera <br> Ram and Storage: 4/6GB,64/128GB</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/realme-8-pro-ofic.jpg" alt="">
-                <h3>Realme 8Pro</h3>
-                <p>Qualcomm Snapdragon 720G <br> 50W SuperDart Charger <br> 108MP Ultra Quad Camera <br> Ram and Storage: 6/8GB,128GB</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
+                <img src="https://img.freepik.com/free-vector/payment-information-concept-illustration_114360-2886.jpg?size=338&ext=jpg&ga=GA1.2.772795766.1662874112" alt="">
+                <h3>Easy payments</h3>
+                <p>We have trusted partnership with brands to ensure you hassle free payment method!</p>
+                <a href="./Dio_Prank.html" class="btn">read more</a>
             </div>
 
         </div>
 
+    </section>
 
-        <h1 class="heading"><span>Apple</span> </h1>
+    <!-- features section ends -->
 
-        <div class="box-container">
+    <!-- products section starts  -->
 
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-pro-129-2022.jpg" alt="">
-                <h3>iPad Pro 12.9 (2022)</h3>
-                <p> Apple M2 chip 8-Core Neural engine 8GB RAM on models with 128GB, 256GB, or 512GB storage 12MP Ultra Wide camera, 122° field of view ƒ/2.4 aperture
-                </p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
+    <section class="products" id="products">
 
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14-plus.jpg" alt="">
-                <h3> iPhone 14 Plus</h3>
-                <p>Apple M2 chip 8-Core Neural engine 8GB RAM on models with 128GB, 256GB, or 512GB storage 12MP Ultra Wide camera, 122° field of view ƒ/2.4 aperture</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
+        <h1 class="heading"> Our <span>products</span> </h1>
 
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-se-2022.jpg" alt="">
-                <h3>Iphone SE (2022)</h3>
-                <p>A15 Bionic chip 6-Core Neural engine 4GB RAM on models with 128GB, 256GB, storage 12MP Main camera, Digital Zoom 5x <br> ƒ/1.8 aperture</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
+        <div class="swiper product-slider">
 
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-mini.jpg" alt="">
-                <h3>Iphone 13 mini</h3>
-                <p>A15 Bionic chip 6-Core Neural engine 4GB RAM on models with 128GB, 256GB, storage 12MP Main camera, Digital Zoom 5x <br> ƒ/1.8 aperture</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
+            <div class="swiper-wrapper">
 
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-12-pro--.jpg" alt="">
-                <h3>Iphone 12 Pro</h3>
-                <p>Apple A14 chip 6-Core Neural engine 8GB RAM on models with 128GB, 256GB, or 512GB storage 12MP Ultra Wide camera, 122° field of view ƒ/2.4 aperture</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
+                <div class="swiper-slide box">
+                    <a href="./sell-page4.html">
+                        <img alt="Xiaomi Redmi Note 10T 5G MORE PICTURES" src=https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-10t-5g.jpg id="cart-image">
+                        <h3>Redmi Note 10T 5G</h3>
+                        <div class="price"> $60 </div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                    </a>
+                    </div>
+                    <select class="color-select">
+                        <option value="Black">Black</option>
+                        <option value="White">White</option>
+                        <option value="Blue">Blue</option>
+                    </select>
+                    <a href="#" class="btn add-cart">add to cart</a>
+                </div>
 
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-pro-11-2020.jpg" alt="">
-                <h3>IPad Pro 11 (2020)</h3>
-                <p>Apple M2 chip 8-Core Neural engine 8GB RAM on models with 128GB, 256GB, or 512GB storage 12MP Ultra Wide camera, 122° field of view ƒ/2.4 aperture</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
+                <div class="swiper-slide box">
+                    <a href="sell-page.html">
+                        <img alt="Apple iPhone 13
+                    MORE PICTURES" src=https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13.jpg>
+                        <h3>iPhone 13</h3>
+                        <div class="price"> $170 </div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                    </a>
+                    </div>
+                    <select class="color-select">
+                        <option value="Black">Black</option>
+                        <option value="White">White</option>
+                        <option value="Blue">Blue</option>
+                    </select>
+                    <a href="#" class="btn add-cart">add to cart</a>
+                </div>
 
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-11-pro-max-.jpg" alt="">
-                <h3>Iphone 11 Pro</h3>
-                <p>A15 Bionic chip 6-Core Neural engine 4GB RAM on models with 128GB, 256GB storage 12MP Main camera, Digital Zoom upto 5x <br> ƒ/1.8 aperture </p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
+                <div class="swiper-slide box">
+                    <a href="sell-page2.html">
+                        <img alt="Xiaomi Mi 11 Ultra MORE PICTURES" src=https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi11-ultra-5g-k1.jpg>
+                        <h3> Xiaomi 11 ultra</h3>
+                        <div class="price"> $250 </div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                    </a>
+                    </div>
+                    <select class="color-select">
+                        <option value="Black">Black</option>
+                        <option value="White">White</option>
+                        <option value="Blue">Blue</option>
+                    </select>
+                    <a href="#" class="btn add-cart">add to cart</a>
+                </div>
 
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/apple-ipad-air-2022-new.jpg" alt="">
-                <h3>IPad Air (2022)</h3>
-                <p>Apple M1 chip 8-Core Neural engine 8GB RAM on models with 128GB, 256GB, or 512GB storage 12MP Ultra Wide camera, 122° field of view ƒ/2.4 aperture</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
+                <div class="swiper-slide box">
+                    <a href="sell-page3.html">
+                        <img alt="OnePlus Nord MORE PICTURES" src=https://fdn2.gsmarena.com/vv/bigpic/oneplus-nord.jpg>
+                        <h3>OnePlus Nord 5g</h3>
+                        <div class="price"> $50 </div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                    </a>
+                    </div>
+                    <select class="color-select">
+                        <option value="Black">Black</option>
+                        <option value="White">White</option>
+                        <option value="Blue">Blue</option>
+                    </select>
+                    <a href="#" class="btn add-cart">add to cart</a>
+                </div>
 
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-8-new.jpg" alt="">
-                <h3>IPhone 8</h3>
-                <p>A11 Bionic chip 6-Core Neural engine 4GB RAM on models with 128GB, 256GB, storage 12MP Main camera, Digital Zoom 5x <br> ƒ/1.8 aperture</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
             </div>
 
         </div>
 
-        <h1 class="heading"><span>Xiaomi</span> </h1>
+        <div class="swiper product-slider">
 
-        <div class="box-container">
+            <div class="swiper-wrapper">
 
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-pad.jpg" alt="">
-                <h3>Redmi Pad</h3>
-                <p>90Hz buttery smooth display High-performance MediaTek Helio G99 Long-lasting 8000mAh (typ) battery Flagship-level unibody design</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
+                <div class="swiper-slide box">
+                    <a href="sell-page6.html">
+                        <img alt="Oppo Reno8 MORE PICTURES" src=https://fdn2.gsmarena.com/vv/bigpic/oppo-reno8.jpg>
+                        <h3>Oppo Reno 8</h3>
+                        <div class="price"> $150 </div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                    </a>
+                    </div>
+                    <select class="color-select">
+                        <option value="Black">Black</option>
+                        <option value="White">White</option>
+                        <option value="Blue">Blue</option>
+                    </select>
+                    <a href="#" class="btn add-cart">add to cart</a>
+                </div>
 
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-12-pro-discovery-explorer.jpg" alt="">
-                <h3>Redmi Note 12 Explorer</h3>
-                <p>Chipset: MediaTek Dimensity 1080 Battery: 4300mAh Main Camera: 200MP Ram and Storage: 8gb,256gb Dual SIM
-                </p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
+                <div class="swiper-slide box">
+                    <a href="sell-page7.html">
+                        <img alt="Realme GT Neo 3 MORE PICTURES" src=https://fdn2.gsmarena.com/vv/bigpic/realme-gt-neo3-new.jpg>
+                        <h3>Realme GT Neo 3</h3>
+                        <div class="price"> $150 </div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                    </a>
+                    </div>
+                    <select class="color-select">
+                        <option value="Black">Black</option>
+                        <option value="White">White</option>
+                        <option value="Blue">Blue</option>
+                    </select>
+                    <a href="#" class="btn add-cart">add to cart</a>
+                </div>
 
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-a1.jpg" alt="">
-                <h3>Redmi A1</h3>
-                <p>8MP AI dual camera Huge 5000mAh battery Powerful and efficient processor Large 6.52" HD+ display 20:9 full screen display</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
+                <div class="swiper-slide box">
+                    <a href="sell-page8.html">
+                        <img alt="Asus ROG Phone 6 Pro MORE PICTURES" src=https://fdn2.gsmarena.com/vv/bigpic/asus-rog-phone6-pro.jpg>
+                        <h3>ROG Phone 6 Pro</h3>
+                        <div class="price"> $230 </div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                    </a>
+                    </div>
+                    <select class="color-select">
+                        <option value="Black">Black</option>
+                        <option value="White">White</option>
+                        <option value="Blue">Blue</option>
+                    </select>
+                    <a href="#" class="btn add-cart">add to cart</a>
+                </div>
 
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-civi2.jpg" alt="">
-                <h3>Xiaomi Civi 2</h3>
-                <p>Chipset: Snapdragon 7 Gen 1(4nm) Battery: 4500mAh Main Camera: 50MP, f/1.8, 2160p Android Version: 12, 13 Dual SIM</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-11-prime-4g.jpg" alt="">
-                <h3>Redmi 11 Prime</h3>
-                <p>Chipset: MediaTek Helio G99 Battery: 5000mAh Main Camera: 50MP, f/1.8 Ram and Storage: 4/6gb,128gb <br> Dual SIM</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-poco-m5.jpg" alt="">
-                <h3>Poco M5</h3>
-                <p>Chipset: MediaTek Helio G99 Battery: 5000mAh Main Camera: 50MP Ram and Storage: 4/6gb,256gb <br> Dual SIM</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-11r.jpg" alt="">
-                <h3>Redmi Note 11R</h3>
-                <p>Chipset: MediaTek Dimensity 700 5G Battery: 5000mAh Main Camera: 50MP, f/1.8 Ram and Storage: 4/6/8gb,128gb Dual SIM</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mix-fold-2.jpg" alt="">
-                <h3>Mix Fold 2</h3>
-                <p>Chipset: Qualcomm Snapdragon 8+ Gen Battery: 4500mAh Main Camera: 50MP, f/1.8 Ram and Storage: 12gb,256/512gb/1tb Dual SIM</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-k50i-5g.jpg" alt="">
-                <h3>Redmi K50i 5G</h3>
-                <p>Chipset: MediaTek Dimensity 8100 Battery: 4980mAh Main Camera: 108MP, f/1.9 Ram and Storage: 6/8gb,128/256gb Dual SIM</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-        </div>
-
-        <h1 class="heading"><span>Samsung</span> </h1>
-
-        <div class="box-container">
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-fold4-5g.jpg" alt="">
-                <h3>Galaxy Z Fold4</h3>
-                <p>Octa-core 3.18GHz CPU <br> 120Hz dynamic Amoled display <br> 50MP Triple Camera <br> Ram and Storage : 12GB, 256GB </p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-flip4-5g.jpg" alt="">
-                <h3> Galaxy Z Flip4</h3>
-                <p>Octa-core 3.18GHz CPU <br> 120Hz dynamic Amoled display <br> 12MP f1.8 Dual Camera <br> Ram and Storage : 8GB, 128GB</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-m13-5g.jpg" alt="">
-                <h3>Galaxy M13 5G</h3>
-                <p>Octa-core 2GHz CPU <br> 60Hz LCD display <br> 50MP Triple Camera <br> Ram and Storage : 4GB, 64GB</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s21-ultra-5g-.jpg" alt="">
-                <h3>Galaxy S21 Ultra</h3>
-                <p>Octa-core 3.18GHz CPU <br> 120Hz Super Smooth dynamic Amoled<br> 108MP Quad Camera <br> Ram and Storage : 16GB, 512GB</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-f02s.jpg" alt="">
-                <h3>Galaxy F02s</h3>
-                <p>Octa-core 1.8GHz CPU <br> 60Hz LCD display <br> 13MP Triple Camera <br> Ram and Storage : 4GB, 32GB</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-f52-5g.jpg" alt="">
-                <h3>Samsung F52 5G</h3>
-                <p>Octa-core 2GHz CPU <br> 60Hz LCD display <br> 50MP Triple Camera <br> Ram and Storage : 4GB, 64GB</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s22-ultra-5g.jpg" alt="">
-                <h3>Galaxy S22 Ultra</h3>
-                <p>Octa-core 3.18GHz CPU <br> 120Hz dynamic Amoled display <br> 50MP Triple Camera <br> Ram and Storage : 12GB, 256GB</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-tab-s8.jpg" alt="">
-                <h3>Galaxy Tab S8</h3>
-                <p>Octa-core 3.18GHz CPU <br> 120Hz dynamic Amoled display <br> 50MP Triple Camera <br> Ram and Storage : 12GB, 512GB</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s22-plus-5g.jpg" alt="">
-                <h3>Galaxy S22+ 5G</h3>
-                <p>Octa-core 3.18GHz CPU <br> 120Hz dynamic Amoled display <br> 50MP Triple Camera <br> Ram and Storage : 12GB, 256GB</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-        </div>
-
-        <h1 class="heading"><span>OnePlus</span> </h1>
-
-        <div class="box-container">
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/oneplus-nord-2t.jpg" alt="">
-                <h3>Nord 2T</h3>
-                <p> 80W SuperVOOC charger <br> 50MP OIS Triple Camera <br> Dimensity 1300 Chipset <br> 90 Hz FHD+ AMOLED Display</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/oneplus-nord-ce-2-lite-5g-0.jpg" alt="">
-                <h3> Nord CE 2 Lite 5G</h3>
-                <p>33W SuperVOOC charger <br> 64MP AI Triple Camera <br> 695 5G Snapdragon <br> 120 Hz FHD+ AMOLED Display</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/oneplus-nord-2-5g-new.jpg" alt="">
-                <h3>Nord 2 5G</h3>
-                <p>65W Fast charger <br> 64MP AI Triple Camera <br> Dimensity 900 Chipset <br> 90 Hz FHD+ AMOLED Display</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/oneplus-nord-n10-5g-.jpg" alt="">
-                <h3>Nord N10 5G</h3>
-                <p>150W SuperVOOC charger <br> 50MP OIS Triple Camera <br> 8+ Gen 1 SnapDragon Chipset <br> 3d cooling System 2.0</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/oneplus-9-pro-.jpg" alt="">
-                <h3>Oneplus 9 Pro</h3>
-                <p>50W Wrap charger <br> 50MP OIS Triple Camera <br> 888 Qualcomm Snapdragon <br> 120 Hz AMOLED Display</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/oneplus-8t.jpg" alt="">
-                <h3>OnePlus 8T</h3>
-                <p>80W SuperVOOC charger <br> 50MP OIS Triple Camera <br> Dimensity 1300 Chipset <br> 90 Hz FHD+ AMOLED Display</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/oneplus-10-pro.jpg" alt="">
-                <h3>OnePlus 10 Pro</h3>
-                <p>80W SuperVOOC charger <br> 50MP OIS Triple Camera <br> Dimensity 1300 Chipset <br> 90 Hz FHD+ AMOLED Display</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/oneplus-10t-5g.jpg" alt="">
-                <h3>Ace Pro</h3>
-                <p>80W SuperVOOC charger <br> 50MP OIS Triple Camera <br> Dimensity 1300 Chipset <br> 90 Hz FHD+ AMOLED Display</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/oneplus-nord-n300-5g.jpg" alt="">
-                <h3>Nord N300</h3>
-                <p>80W SuperVOOC charger <br> 50MP OIS Triple Camera <br> Dimensity 1300 Chipset <br> 90 Hz FHD+ AMOLED Display</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-        </div>
-
-        <h1 class="heading"><span>Oppo</span> </h1>
-
-        <div class="box-container">
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/oppo-a1-pro.jpg" alt="">
-                <h3>Oppo A1 Pro</h3>
-                <p>MediaTek Helio G35 <br> 13MP Ai Triple Camera <br> 5000mAh Long-lasting <br> Ram and Storage: 3/4GB,32/64GB</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/oppo-k10x-.jpg" alt="">
-                <h3> Oppo K10x</h3>
-                <p>MediaTek Dimensity 810 <br> 33W SuperVOOC Charger <br> 5000mAh Long-lasting battery <br> Ram and Storage: 8GB,128GB</p>
-
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select> <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/oppo-reno8z-5g.jpg" alt="">
-                <h3>Oppo Reno8 Z</h3>
-                <p>MediaTek Dimensity 8100 <br> 80W SuperVOOC Charger <br> 50MP Sony IMX766 Camera <br> Ram and Storage: 12GB,256GB</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/oppo-reno8-pro-.jpg" alt="">
-                <h3>Oppo Reno8 Pro+</h3>
-                <p>MediaTek Dimensity 8100 <br> 80W SuperVOOC Charger <br> 50MP Sony IMX766 Camera <br> Ram and Storage: 12GB,256GB</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/oppo-reno7-4g.jpg" alt="">
-                <h3>Oppo F21 Pro</h3>
-                <p>Octa-Core SnapDragon 680<br> 90Hz AMOLED display <br> 33W SuperVOOC <br> Ram and Storage: 8GB,128GB</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/oppo-pad.jpg" alt="">
-                <h3>Oppo Pad</h3>
-                <p>Qualcomm SnapDragon 680 <br> 7100mAH Battery <br> 60Hz Display<br> Ram and Storage: 4GB,64/128GB</p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/oppo-find-x5-pro.jpg" alt="">
-                <h3>Find X5 Pro</h3>
-                <p> MediaTek Dimensity 8100 <br> 80W SuperVOOC Charger <br> 50MP Sony IMX766 Camera <br> Ram and Storage: 12GB,256GB </p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/oppo-a95.jpg" alt="">
-                <h3>Oppo A95</h3>
-                <p> MediaTek Dimensity 8100 <br> 80W SuperVOOC Charger <br> 50MP Sony IMX766 Camera <br> Ram and Storage: 12GB,256GB </p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
-            </div>
-
-            <div class="box">
-                <img src="https://fdn2.gsmarena.com/vv/bigpic/oppo-find-n.jpg" alt="">
-                <h3>Oppo Find N</h3>
-                <p> MediaTek Dimensity 8100 <br> 80W SuperVOOC Charger <br> 50MP Sony IMX766 Camera <br> Ram and Storage: 12GB,256GB </p>
-                <select class="color-select">
-    <option value="Black">Black</option>
-    <option value="White">White</option>
-    <option value="Titanium Gray">Titanium Gray</option>
-    <option value="Deep Blue">Deep Blue</option>
-    <option value="Sky Blue">Sky Blue</option>
-    <option value="Purple">Purple</option>
-    <option value="Dark Purple">Dark Purple</option>
-    <option value="Green">Green</option>
-    <option value="Olive Green">Olive Green</option>
-    <option value="Rose Gold">Rose Gold</option>
-    <option value="Gold">Gold</option>
-    <option value="Silver">Silver</option>
-    <option value="Copper">Copper</option>
-</select>
-                <a href="#" class="btn" id="add-cart">add to cart</a>
+                <div class="swiper-slide box" data-name="Samsung S22" data-image="https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s22-5g.jpg">
+                    <a href="sell-page5.html">
+                        <img alt="Samsung Galaxy S22 5G MORE PICTURES" src="https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s22-5g.jpg">
+                        <h3>Samsung S22</h3>
+                        <div class="price"> $204 </div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                    </a>
+                    </div>
+                    <select class="color-select">
+                        <option value="Black">Black</option>
+                        <option value="White">White</option>
+                        <option value="Blue">Blue</option>
+                    </select>
+                    <a href="#" class="btn add-cart">add to cart</a>
+                </div>
             </div>
 
         </div>
 
 
     </section>
-    <!-- Shop section ends -->
 
+    <!-- products section ends -->
+
+    <!-- categories section starts  -->
+
+    <section class="categories" id="categories">
+
+        <h1 class="heading"> Product <span>Category</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="./image/oneplus.jfif" alt="">
+                <h3>ONEPLUS</h3>
+                <p>upto 45% off</p>
+                <a href="./Oneplus.html" class="btn">shop now</a>
+            </div>
+            <div class="box">
+                <img src="./image/samsung-logo-png-1286.png" alt="">
+                <h3>SAMSUNG</h3>
+                <p>upto 45% off</p>
+                <a href="./samsung.html" class="btn">shop now</a>
+            </div>
+
+            <div class="box">
+                <img src="./image/iphone-logo-527.png" alt="">
+                <h3>IPHONE</h3>
+                <p>upto 25% off</p>
+                <a href="./iphone.html" class="btn">shop now</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- categories section ends -->
 
     <!-- review section starts  -->
 
@@ -1440,7 +469,7 @@ background:white;">
                     </div>
                     <h3> Everything You Need is Here</h3>
                     <p>Why i prefer this site? let me explain it in my blog.</p>
-                    <a href="./Dio_Prank.html" class="btn">read more</a>
+                    <a href="./index.html" class="btn">read more</a>
                 </div>
             </div>
 
@@ -1453,7 +482,7 @@ background:white;">
                     </div>
                     <h3>Latest Features Smartphone</h3>
                     <p>iam tech-holic. this site provide latest updates absolutely fast.</p>
-                    <a href="./Dio_Prank.html" class="btn">read more</a>
+                    <a href="./index.html" class="btn">read more</a>
                 </div>
             </div>
 
@@ -1466,7 +495,7 @@ background:white;">
                     </div>
                     <h3>Latest And Best Products </h3><br> &nbsp;
                     <p>what you want from a mobile website? smartphone ofcourse.</p> <br>
-                    <a href="./Dio_Prank.html" class="btn">read more</a>
+                    <a href="./index.html" class="btn">read more</a>
                 </div>
             </div>
 
@@ -1508,43 +537,22 @@ background:white;">
                 <p>subscribe for latest updates</p>
                 <input type="email" placeholder="your email" class="email">
                 <input type="submit" value="subscribe" class="btn">
-                <img src="image/payment.png" class="payment-img" alt="">
+                <img src="./image/3390.jpg" class="payment-img" alt="">
             </div>
 
         </div>
 
-        <div class="credit"> 2026 | all rights reserved </div>
+        <div class="credit"> <span> 2026 </span> | all rights reserved </div>
 
     </section>
 
     <!-- footer section ends -->
-
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
     <!-- custom js file link  -->
-    <script>
-        var swiper = new Swiper(".review-slider", {
-            loop: true,
-            spaceBetween: 20,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            centeredSlides: true,
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                },
-                768: {
-                    slidesPerView: 2,
-                },
-                1020: {
-                    slidesPerView: 3,
-                },
-            },
-        });
-    </script>
     <script src="./js/script.js"></script>
+    <script src="./js/cart.js"></script>
+
 </body>
 
 </html>
